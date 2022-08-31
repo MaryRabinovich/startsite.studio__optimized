@@ -1,0 +1,19 @@
+.bubble {
+    // border: 1px solid white;
+    // bor 
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+    &-big {
+        width: 25px;
+        height: 25px;
+        border: 1px solid orange;
+    }
+
+    &-small {
+        width: 4px;
+        height: 4px;
+        background: orange;
+    }
+}
