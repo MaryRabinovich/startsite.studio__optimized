@@ -1,6 +1,5 @@
 .bubble {
-    // border: 1px solid white;
-    // bor 
+    pointer-events: none;
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);

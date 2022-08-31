@@ -3,17 +3,17 @@ import { createBubble } from './bubbles/createBubble.js'
 import { getPointerStream } from './bubbles/getPointerStream.js'
 import { getTimerStream } from './bubbles/getTimerStream.js'
 
-const bubbleBig = createBubble('big')
-const bubbleSmall = createBubble('small')
-
-const pointerStream = getPointerStream()
-pointerStream.attach(bubbleSmall)
-pointerStream.attach(bubbleBig)
-pointerStream.start()
-
-const timerStream = getTimerStream()
+const bubbles = {
+    big: createBubble('big'),
+    small: createBubble('small'),
+    pointerStream: getPointerStream(),
+    timerStream: getTimerStream()
+}
+bubbles.pointerStream.attach(bubbles.big)
+bubbles.pointerStream.attach(bubbles.small)
+bubbles.pointerStream.start()
 addEventListener('pointermove', function () {
-    timerStream.attach(bubbleBig)
-    timerStream.attach(bubbleSmall)
-    timerStream.start()
+    bubbles.timerStream.attach(bubbles.big)
+    bubbles.timerStream.attach(bubbles.small)
+    bubbles.timerStream.start()
 })
