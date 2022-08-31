@@ -1,7 +1,9 @@
-import config from './config.js'
 import { createBubble } from './bubbles/createBubble.js'
 import { getPointerStream } from './bubbles/getPointerStream.js'
 import { getTimerStream } from './bubbles/getTimerStream.js'
+import printingStream from './printing/stream.js'
+
+printingStream.up()
 
 const bubbles = {
     big: createBubble('big'),

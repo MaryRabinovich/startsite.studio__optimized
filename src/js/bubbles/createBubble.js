@@ -1,6 +1,8 @@
 import { config } from "../config.js";
 import { createArchive } from "./createArchive.js";
 
+const cnfg = config.bubbles
+
 export function createBubble(type) {
 
     const view = document.createElement('div')
@@ -9,7 +11,7 @@ export function createBubble(type) {
     document.querySelector('body').appendChild(view)
 
     const archive = createArchive(
-        config.bubbles[type].elegance
+        cnfg[type].elegance
     )
 
     function adjustPosition() {

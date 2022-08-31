@@ -1,5 +1,7 @@
 import { config } from "../config.js"
 
+const cnfg = config.bubbles.interval
+
 export function getTimerStream() {
 
     const observers = []
@@ -12,7 +14,7 @@ export function getTimerStream() {
         timerID = setInterval(function () {
             notify()
             // console.log('tick')
-        }, config.bubbles.interval)
+        }, cnfg)
     }
 
     function stop() {

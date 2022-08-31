@@ -9,5 +9,19 @@ export const config = {
         big: {
             elegance: 50
         }
+    },
+    printing: {
+        colors: ['orange', 'magenta', 'green'],
+        phrases: [
+            'Пока просто фразы',
+            'Заглушки',
+            'Потом заменить',
+        ],
+        intervals: {
+            printing: 100,
+            onComplete: 3000,
+            erasing: 40,
+            onEmpty: 1000
+        }
     }
 }

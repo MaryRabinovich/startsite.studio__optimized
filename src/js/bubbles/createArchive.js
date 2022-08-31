@@ -1,5 +1,7 @@
 import { config } from "../config.js"
 
+const cnfg = config.bubbles
+
 function memorizeHelper(arr, value) {
     arr.unshift(value)
     arr.pop()
@@ -22,9 +24,9 @@ function isHomogeniousHelper(arr) {
 
 export function createArchive(elegance) {
 
-    const x = new Array(elegance).fill(config.bubbles.startX)
+    const x = new Array(elegance).fill(cnfg.startX)
     
-    const y = new Array(elegance).fill(config.bubbles.startY)
+    const y = new Array(elegance).fill(cnfg.startY)
 
     function memorize(xValue, yValue) {
         memorizeHelper(x, xValue)

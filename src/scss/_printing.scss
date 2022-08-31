@@ -1,0 +1,25 @@
+#printing {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+
+    &:before {
+        content: '>';
+        color: gray;
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
+
+    &:after {
+        content: '|';
+        animation: blink 1s linear infinite;
+    }
+}
+
+@keyframes blink {
+    0% { color: gray; }
+    50% { color:  gray; }
+
+    51% { color: transparent; }
+    100% { color: transparent; }
+}
