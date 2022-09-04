@@ -10,6 +10,14 @@ export function createBubble(type) {
     view.classList.add(`bubble-${type}`)
     document.querySelector('body').appendChild(view)
 
+    function addContactClass() {
+        view.classList.add(`bubble-${type}-contact`)
+    }
+
+    function removeContactClass() {
+        view.classList.remove(`bubble-${type}-contact`)
+    }
+
     const archive = createArchive(
         cnfg[type].elegance
     )
@@ -34,6 +42,8 @@ export function createBubble(type) {
     }
 
     return {
+        addContactClass,
+        removeContactClass,
         updateWithPointerStream,
         updateWithTimerStream,
         readyToDetachFromTimerStream

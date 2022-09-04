@@ -2,10 +2,11 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 2rem;
+    text-decoration: none;
 
     &:before {
         content: '>';
-        color: gray;
+        color: $color-medium;
         font-weight: bold;
         padding-right: 0.5rem;
     }
@@ -17,8 +18,8 @@
 }
 
 @keyframes blink {
-    0% { color: gray; }
-    50% { color:  gray; }
+    0% { color: $color-medium; }
+    50% { color:  $color-medium; }
 
     51% { color: transparent; }
     100% { color: transparent; }

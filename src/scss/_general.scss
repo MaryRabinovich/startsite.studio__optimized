@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $color-dark;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+
+    header {
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid $color-medium;
+
+        a {
+            color: $color-light;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+    }
+
+    section {
+        padding: 1rem;
+        color: $color-medium;
+        max-height: 50vh;
+        overflow-y: auto;
+
+        p {
+            line-height: 1.5;
+            padding-bottom: 1rem;
+        }
+    }
+}

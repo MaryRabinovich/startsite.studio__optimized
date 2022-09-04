@@ -2,6 +2,7 @@ import { createBubble } from './bubbles/createBubble.js'
 import { getPointerStream } from './bubbles/getPointerStream.js'
 import { getTimerStream } from './bubbles/getTimerStream.js'
 import printingStream from './printing/stream.js'
+import { addLinksContactBehaviour } from './bubbles/addLinksContactBehaviour.js'
 
 printingStream.up()
 
@@ -19,3 +20,7 @@ addEventListener('pointermove', function () {
     bubbles.timerStream.attach(bubbles.small)
     bubbles.timerStream.start()
 })
+addLinksContactBehaviour([
+    bubbles.big,
+    bubbles.small
+])

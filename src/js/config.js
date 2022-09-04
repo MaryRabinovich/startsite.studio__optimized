@@ -4,18 +4,21 @@ export const config = {
         startY: 200,
         interval: 20,
         small: {
-            elegance: 30
+            elegance: 20
         },
         big: {
-            elegance: 50
+            elegance: 30
         }
     },
     printing: {
-        colors: ['orange', 'magenta', 'green'],
+        colors: ['orange', 'magenta', 'green', 'white'],
         phrases: [
-            'Пока просто фразы',
-            'Заглушки',
-            'Потом заменить',
+            'подробнее',
+            'код и readme.md',
+            'у меня',
+            'на гитхабе',
+            'MaryRabinovich',
+            'проект startsite optimized'
         ],
         intervals: {
             printing: 100,
